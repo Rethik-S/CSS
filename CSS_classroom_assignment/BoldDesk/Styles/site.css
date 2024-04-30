@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    width: 7.5rem;
+}
+
+.nav {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.nav__links {
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 600;
+    gap: 1rem;
+}
+
+.nav__links >li{
+    padding: 1rem;
+}
+
+.nav__links>li:hover {
+    background-color: #283a5e11;
+    border-radius: 1rem;
+}
+
+.burger {
+    width: 2rem;
+    height: 0.24rem;
+    border-radius: 2rem;
+    background-color: rgb(255, 72, 0);
+    margin: 6px 0;
+    display: none;
+
+}
+.arrow{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.btn {
+    background: none;
+    border: 2px solid rgb(255, 72, 0);
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn:hover{
+ background-color: rgb(255, 88, 22);
+ color: black;
+}
+.hollow-btn {
+    color: rgb(255, 72, 0);
+}
+
+.fill-btn {
+    color: white;
+    background-color: rgb(255, 72, 0);
+}
+
+.header {
+    text-align: center;
+    font-weight: 600;
+    padding: 6rem;
+}
+
+.heading {
+    font-size: 3.5rem;
+}
+
+.dropdown {
+    position: absolute;
+    display: none;
+}
+
+.list li {
+    padding: 0.8rem;
+}
+
+.list li:hover {
+    text-decoration: underline;
+}
+
+.card {
+    padding: 2rem;
+    width: fit-content;
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.166);
+    transition: all 0.4s ease-in-out;
+}
+
+.product:hover .card {
+    display: block;
+    margin-top: 0.1rem;
+}
+
+.contact {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.contact-box {
+    display: flex;
+}
+
+.right-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-content {
+    width: 50%;
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.contact-card {
+    display: flex;
+    width: 90%;
+    gap: 1rem;
+    padding: 3.5rem 2rem;
+    line-height: 1.8;
+    cursor: pointer;
+}
+
+.contact-card svg {
+    width: 9rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #606f85;
+}
+
+.input {
+    padding: 0.8rem 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(37, 37, 37, 0.226);
+}
+
+.contact__link {
+    color: rgb(255, 72, 0);
+}
+
+.card:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+.location-box {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem 2rem;
+    padding: 4rem 0;
+}
+
+.location-card {
+    width: 33rem;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.location-heading {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+.footer {
+    text-align: center;
+    background-color: aliceblue;
+    padding: 10rem;
+}
+
+@media screen and (max-width:860px) {
+    .nav {
+        justify-content: space-between;
+    }
+
+    .nav__links {
+        display: none;
+    }
+
+    .nav__buttons {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .contact-box {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .location-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right-content {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .contact-card {
+        flex-direction: column;
+    }
+
+    .location-card {
+        flex-direction: column;
+    }
+
+    .burger-outer:hover .nav__links {
+        height: 100%;
+        width: 60vh;
+        position: absolute;
+        display: block;
+        top: 0.1rem;
+        right: 0;
+        margin: 0 auto;
+        background-color: white;
+        padding: 2rem;
+        border-left: 1px solid rgba(44, 44, 44, 0.342);
+    }
+
+    .product:hover .card {
+        margin-right: 50%;
+    }
+
+    .dropdown {
+        width: fit-content;
+        margin-left: -2px;
+    }
+
+    .dropdown {
+        width: 50vw;
+    }
+
+    .nav__links>li {
+        padding: 2rem;
+        border-bottom: 1px solid black;
+    }
+}
