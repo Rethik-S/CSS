@@ -207,11 +207,42 @@ a {
 }
 
 .footer {
+    color: #283a5e;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
     background-color: aliceblue;
-    padding: 10rem;
+    border-top: 1px solid rgba(48, 48, 48, 0.56);
+}
+.footer-links{
+    background-color: aliceblue;
+
+    color: #283a5e;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+.footer-links>div>p{
+    margin-top: 0.4rem;
+    cursor: pointer;
+}
+.footer-images{
+    background-color: aliceblue;
+    margin: 0 auto;
+    color: #283a5e;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    
 }
 
+.socials{
+    font-size: 1.6rem;
+}
 @media screen and (max-width:860px) {
     .nav {
         justify-content: space-between;
